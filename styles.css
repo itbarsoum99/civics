@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Roboto:wght@100;300&display=swap');
+
+body {
+  /*
+  color: #e8eaed;
+  background-color: #202124;*/
+  font-family: "Roboto", sans-serif;
+  background-color: #e8eaed;
+  color: #202124;
+  margin: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+}
+
+p {
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 10em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  line-height: 90%;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3, h4 {
+  font-size: 1.5em;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+}
+
+b {
+  font-weight: 500;
+}
+
+#dynamicMsg {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+td {
+  padding: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 25px;
+  background-color: #202124;
+  color: #e8eaed;
+  border: 3px solid transparent;
+  width: 33%;
+  font-family: "Lato", sans-serif;
+  font-weight: 300 !important;
+  font-style: italic;
+}
+
+mark {
+  background-color: #f0f0f0;
+}
+
+::selection{
+  color: #e8eaed;
+  background-color: #202124;
+}
+
+.navbar{
+  position:fixed;
+  top:0;
+  left: 0;
+  background: transparent;
+  width:100%;
+  text-align: right;
+  width: 100vw;
+  padding: 8px;
+  padding-right: 15px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2)
+}
+nav a {
+  text-decoration: none;
+  color: #202124;
+  padding: 12px;
+  font-size: 20px;
+  padding-top: 15px; 
+}
+
+.blue{
+  background:#202124;
+}
+.blue.navbar ul li a{
+    color: #e8eaed;
+}
+
+.collapsible {
+  background-color: #202124;
+  color: #e8eaed;
+  cursor: pointer;
+  padding: 13px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.3s;
+  font-size: 22px !important;
+  font-weight: 400;
+}
+
+.collapsible h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+} 
+
+.active, .collapsible:hover {
+  background-color: #161619;
+}
+
+.fill {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.collapsible:after {
+  content: '+';
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '-'; 
+  font-weight: bold;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.newsitem {
+  color: #202124;
+  padding: 15px;
+  background-color: #b7bdc6;
+  width: 50%;
+  margin-bottom: 8px;
+}
+
+.newsitem h4 {
+  text-decoration: underline;
+  margin-block-start: 0;
+  margin-block-end: 25px;
+}
+
+.newsitem:hover h4 {
+  text-decoration: none;
+}
+
+byline {
+  font-weight: 500;
+}
+
+.box{
+	width: 800px; 
+	position: relative;
+	box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
+  padding: 30px;
+}
+@media (max-width: 1100px) {
+  .newsitem {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 8em;
+  }
+  .box{
+	  width: 700px !important; 
+  }
+  .newsitem {
+    width: 75%;
+  }
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 7em;
+  }
+  table, tbody, th, td, tr, thead {
+    display: block;
+  }
+  td {
+    border: none;
+    position; relative;
+    white-space: normal;
+    text-align:left;
+    width: 94%;
+    border-bottom: 2px solid #e8eaed;
+  }
+  .box {
+    width: 600px !important;
+  }
+  .newsitem {
+    width: 75%;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 6em;
+  }
+  #dynamicMsg {
+    font-size: 22px;
+  }
+  .collapsible {
+    font-size: 18px;
+  }
+  .box {
+    width: 500px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    text-align: center;
+  }
+  .newsitem {
+    width: 94%;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 5em;
+  }
+  .box {
+    width: 350px !important;
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  
+}
+
+@media (pointer:coarse) {
+  h1 {
+    font-size: 5em;
+  }
+  #dynamicMsg {
+    font-size: 40px;
+  }
+  .navbar {
+    text-align: center;
+  }
+  .box {
+    width: 800px !important;
+  }
+}
+
+

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Civic Education</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+var messages = [
+	'Our children need', 'Our schools need', 'Our democracy needs', 'Our elections need', 'Our people need', 'Our society needs'
+];
+var msgCycleRate = 3000;
+function get( eid ) { return document.getElementById( eid ); }
+;
+	function getRandomInt(max, min) {
+		if ('undefined' == typeof min) min = 0;
+		var range = max - min + 1;
+		var r = Math.min( range, Math.floor( range*Math.random( )));
+		return min + r;
+	}
+;
+function cycleMsgs( idx ) {
+	if ('undefined' == typeof idx) idx = -1;
+	idx = (idx + 1)%messages.length;
+	get( 'dynamicMsg' ).innerHTML = messages[ idx ];
+	setTimeout( 'cycleMsgs(' + idx + ');', msgCycleRate);
+}
+;
+function doMsgs() {
+	setTimeout( 'cycleMsgs();', 0);
+}
+;
+if(window.addEventListener)
+  window.addEventListener('load', doMsgs, false); // non-IE
+else window.attachEvent('onload', doMsgs); // IE
+</script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/join/">Join</a>
+    <a href="/news/">News</a>
+    <a href="/essays/">Essays</a>
+  </nav>
+  <main class="content">
+    <p id="dynamicMsg">Our children need</p>
+    <div class="box">
+      <h1>Civic<br/> Education</h1>
+    </div>
+  </main>
+  <script src="/main.js"></script>
+</body>
+</html>
